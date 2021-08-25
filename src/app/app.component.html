@@ -1,0 +1,32 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span>angular</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>info</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>home</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav mode='side' opened>
+    <mat-nav-list style="width: 200px;">
+      <a mat-list-item routerLink = "dashboard"><mat-icon>dashboard</mat-icon> Dashboard</a>
+      <a mat-list-item routerLink = 'mail'><mat-icon>mail</mat-icon> Mail</a>
+      <a mat-list-item><mat-icon>mail</mat-icon> Student</a>
+      <a mat-list-item><mat-icon>dns</mat-icon> Courses</a>
+      <a mat-list-item><mat-icon>dashboard</mat-icon> Dashboard</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p style="height: 88vh;">
+      <router-outlet></router-outlet>
+    </p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
